@@ -6,7 +6,7 @@ const maxSizeCSV = 5 * 1024 * 1024;
 
 let storage = multer.diskStorage({
     destination: (req, file, cb) => {
-        cb(null, __basedir + "/resources/uploads");
+        cb(null, __basedir + "/uploads");
     },
     filename: (req, file, cb) => {
         console.log(file.originalname);
@@ -16,7 +16,7 @@ let storage = multer.diskStorage({
 
 let storageCSV = multer.diskStorage({
     destination: (req, file, cb) => {
-        cb(null, __basedir + "/resources/uploads/csv");
+        cb(null, __basedir + "/uploads/csv");
     },
     filename: (req, file, cb) => {
         console.log(file.originalname);
